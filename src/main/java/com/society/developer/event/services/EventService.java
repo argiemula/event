@@ -1,5 +1,6 @@
 package com.society.developer.event.services;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,11 @@ public class EventService {
 		return eventRepo.findById(id).orElse(null);
 	}
 	
-	public void delete(Long id) {
-		eventRepo.deleteById(id);
+	public void delete(Event event) {
+		eventRepo.delete(event);
+	}
+	
+	public List<Event> findByDateBetween(LocalDateTime start, LocalDateTime end){
+		return eventRepo.findByDateBetween(start, end);
 	}
 }
