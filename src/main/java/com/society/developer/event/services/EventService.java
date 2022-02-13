@@ -34,4 +34,8 @@ public class EventService {
 	public List<Event> findByDateBetween(LocalDateTime start, LocalDateTime end){
 		return eventRepo.findByDateBetween(start, end);
 	}
+	
+	public void deleteById(Long id) {
+		eventRepo.deleteById(id);
+	}
 }

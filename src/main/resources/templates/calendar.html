@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset='utf-8' content="Cory Sanoy" name="Author" />
+<meta charset='utf-8' />
 
 
 <link href="http://cdn.jsdelivr.net/webjars/fullcalendar/2.2.5/fullcalendar.css"
@@ -386,7 +386,7 @@
 <body>
 
 	<div id="header">
-		<h1>List of Event Calendar </h1>
+		<h1>List of Event Calendar </h1><span><a th:href="@{/index}">Back</a></span>
 	</div>
 
 	<div id='script-warning'>
